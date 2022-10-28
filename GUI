@@ -9,7 +9,8 @@ import time
 #Window
 window = tk.Tk()
 
-def enter_name(event, name):
+def enter_name(event):
+    global name
     t_2 = tk.Label(text='Hello'+name+'! Best of Luck!')
     t_2.pack()
 
