@@ -1,0 +1,33 @@
+import tkinter as tk
+from functools import partial
+from itertools import count
+from operator import length_hint
+import random
+from sys import displayhook
+import time
+
+#Window
+window = tk.Tk()
+
+def enter_name(event, name):
+    t_2 = tk.Label(text='Hello'+name+'! Best of Luck!')
+    t_2.pack()
+
+#Initialization
+def ini():
+    global name
+
+    t_0 = tk.Label(text='Welcome to Hangman game!')
+    t_1 = tk.Label(text='Enter your name:')
+    entry_0 = tk.Entry()
+    name = entry_0.get()
+    b_0 = tk.Button(text='Enter')
+    b_0.bind('<Button-1>', enter_name)
+
+    t_0.pack()
+    t_1.pack()
+    entry_0.pack()
+    b_0.pack()
+
+ini()
+window.mainloop()
